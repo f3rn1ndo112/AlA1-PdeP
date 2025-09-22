@@ -66,7 +66,7 @@ function main(){
                 listartareas(tareas);
                 break;
             case 2:
-                eleccion2 = prompt("Ingrese el numero de la tarea que desea buscar: ");
+                eleccion2 = Number(prompt("Ingrese el numero de la tarea que desea buscar: ");
                 for (let i = 0; i < tareas.length; i++){
                     if (tareas[i].tarenanum == eleccion2){
                         console.log("Tarea numero: " + tareas[i].tarenanum);
