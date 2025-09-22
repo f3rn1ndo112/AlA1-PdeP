@@ -51,8 +51,7 @@ function listartareas(tareas){
 function main(){
     let tareas = [];
     let cantidadtareas = 0;
-    let busqueda;
-    let eleccionedicion;
+    let eleccion2;
     let tarea;
     let opcion;
     let salir;
@@ -67,9 +66,9 @@ function main(){
                 listartareas(tareas);
                 break;
             case 2:
-                busqueda = prompt("Ingrese el numero de la tarea que desea buscar: ");
+                eleccion2 = prompt("Ingrese el numero de la tarea que desea buscar: ");
                 for (let i = 0; i < tareas.length; i++){
-                    if (tareas[i].tarenanum == busqueda){
+                    if (tareas[i].tarenanum == eleccion2){
                         console.log("Tarea numero: " + tareas[i].tarenanum);
                         console.log("Titulo: " + tareas[i].titulo);
                         console.log("Descripcion: " + tareas[i].descripcion);
@@ -91,10 +90,10 @@ function main(){
                 cantidadtareas++;
                 break;
             case 4:
-                busqueda = Number(prompt("Ingrese el numero de la tarea que desea modificar: "));
+                eleccion2 = Number(prompt("Ingrese el numero de la tarea que desea modificar: "));
                 for (let i = 0; i < tareas.length; i++){
-                    if (tareas[i].tarenanum == busqueda){
-                        switch (eleccionedicion = Number(prompt("Que desea modificar? 1.Titulo, 2.Descripcion, 3.Estado, 4.Dificultad, 5.Fecha de vencimiento"))){
+                    if (tareas[i].tarenanum == eleccion2){
+                        switch (eleccion2 = Number(prompt("Que desea modificar? 1.Titulo, 2.Descripcion, 3.Estado, 4.Dificultad, 5.Fecha de vencimiento"))){
                             case 1:
                                 tareas[i].titulo = prompt("Ingrese el nuevo titulo: ");
                                 break;
@@ -124,9 +123,9 @@ function main(){
                 }
                 break;
             case 5:
-                busqueda = Number(prompt("Ingrese el numero de la tarea que desea eliminar: "));
+                eleccion2 = Number(prompt("Ingrese el numero de la tarea que desea eliminar: "));
                 for (let i = 0; i < tareas.length; i++){
-                    if (tareas[i].tarenanum == busqueda){
+                    if (tareas[i].tarenanum == eleccion2){
                         tareas[i].tarenanum = -1;
                         coincidencia++;
                     }
